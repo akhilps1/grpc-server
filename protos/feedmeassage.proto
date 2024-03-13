@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+message Trip {
+  string trip_id = 1;
+  string route_id = 2;
+  string start_time = 3;
+  string start_date = 4;
+  int32 schedule_relationship = 5;
+}
+
+message Position {
+  float latitude = 1;
+  float longitude = 2;
+}
+
+message Vehicle {
+  Trip trip = 1;
+  string id = 2;
+  Position position = 3;
+  int64 timestamp = 4;
+}
+
+message VehicleData {
+  repeated Vehicle vehicles = 1;
+}
+
+message GetAvailableBusRequest {
+
+}
+
+service Greeter {
+
+  rpc getAvailableBus (GetAvailableBusRequest) returns (VehicleData);
+  
+}
