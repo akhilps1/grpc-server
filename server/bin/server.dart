@@ -7,7 +7,7 @@ import 'feed_meassage_serveice.dart';
 void main(List<String> arguments) async {
   final server = Server.create(services: [FeedMeassageServeice()]);
 
-  final port = int.parse(Platform.environment['PORT'] ?? '8080');
+  final port = int.parse(Platform.environment['PORT'] ?? '8000');
   await server.serve(port: port);
 
   print('Server listening on port $port...');
