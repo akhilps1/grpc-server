@@ -28,7 +28,7 @@ message GetAvailableBusRequest {
 
 }
 
-service Greeter {
+service FeedServeice {
 
   rpc getAvailableBus (GetAvailableBusRequest) returns (VehicleData);
   
