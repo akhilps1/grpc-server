@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:protos/protos.dart';
@@ -11,5 +10,5 @@ void main(List<String> arguments) async {
   final port = int.parse(Platform.environment['PORT'] ?? '8080');
   await server.serve(port: port);
 
-  log('Server listening on port $port...');
+  print('Server listening on port $port...');
 }
