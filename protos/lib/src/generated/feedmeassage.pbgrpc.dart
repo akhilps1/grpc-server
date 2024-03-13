@@ -19,14 +19,14 @@ import 'feedmeassage.pb.dart' as $0;
 
 export 'feedmeassage.pb.dart';
 
-@$pb.GrpcServiceName('Greeter')
-class GreeterClient extends $grpc.Client {
+@$pb.GrpcServiceName('FeedServeice')
+class FeedServeiceClient extends $grpc.Client {
   static final _$getAvailableBus = $grpc.ClientMethod<$0.GetAvailableBusRequest, $0.VehicleData>(
-      '/Greeter/getAvailableBus',
+      '/FeedServeice/getAvailableBus',
       ($0.GetAvailableBusRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.VehicleData.fromBuffer(value));
 
-  GreeterClient($grpc.ClientChannel channel,
+  FeedServeiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options,
@@ -37,11 +37,11 @@ class GreeterClient extends $grpc.Client {
   }
 }
 
-@$pb.GrpcServiceName('Greeter')
-abstract class GreeterServiceBase extends $grpc.Service {
-  $core.String get $name => 'Greeter';
+@$pb.GrpcServiceName('FeedServeice')
+abstract class FeedServeiceServiceBase extends $grpc.Service {
+  $core.String get $name => 'FeedServeice';
 
-  GreeterServiceBase() {
+  FeedServeiceServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.GetAvailableBusRequest, $0.VehicleData>(
         'getAvailableBus',
         getAvailableBus_Pre,
