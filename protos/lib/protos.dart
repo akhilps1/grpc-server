@@ -1,6 +1,8 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
 library protos;
 
-// TODO: Export any libraries intended for clients of this package.
+export 'src/generated/feedmeassage.pb.dart';
+export 'src/generated/feedmeassage.pbenum.dart';
+export 'src/generated/feedmeassage.pbgrpc.dart';
+export 'src/generated/feedmeassage.pbjson.dart';
+
+export 'package:grpc/grpc.dart';
